@@ -1,60 +1,52 @@
 ---
 name: qa-locator-generator
-description: Generates stable automation locators and Playwright selectors
+description: Automatically generate robust automation locators from DOM elements.
+author: Rahul Ranpura
+license: MIT
 version: 1.0.0
+tags:
+  - qa
+  - automation
+  - locator
+  - playwright
+  - selenium
+  - testing
 ---
 
 # QA Locator Generator
 
-## Purpose
+## Overview
+QA Locator Generator creates reliable selectors automatically for UI automation frameworks.
 
-Generate reliable, automation-friendly selectors from analyzed DOM.
+It converts DOM elements into optimized locators.
 
-This skill converts UI elements into:
-- Playwright locators
-- resilient selectors
-- test-ready actions
+## Capabilities
 
----
-
-## Inputs
-
-- DOM analysis output
-- page HTML
-- user flows
-- test scenarios
-
----
-
-## Responsibilities
-
-1. Identify interactive elements
-2. Generate stable selectors
-3. Avoid brittle locators
-4. Prefer semantic attributes
-5. Output Playwright-ready code
-
----
+- Generate Playwright locators
+- Generate Selenium selectors
+- Prioritize accessibility attributes
+- Avoid brittle XPath
+- Provide multiple locator options
 
 ## Locator Priority
 
 1. data-testid
 2. aria-label
-3. role selectors
-4. text selectors
-5. CSS fallback
+3. role
+4. unique id
+5. css selector
+6. xpath (fallback)
 
-Avoid:
-- nth-child
-- dynamic class names
-- inline indexes
+## Usage
 
----
+Use when:
+- Writing new automation scripts
+- Migrating frameworks
+- Improving locator quality
 
-## Output Format
+## Output
 
-Return:
-
-- locator map
-- Playwright snippets
-- selector confidence score
+- Playwright locator
+- Selenium locator
+- CSS selector
+- XPath fallback
